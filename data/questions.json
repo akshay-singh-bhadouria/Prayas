@@ -1,0 +1,57 @@
+[
+  {
+    "id": "polity-1",
+    "topic": "Polity",
+    "difficulty": "Easy",
+    "question": "Which article of the Indian Constitution deals with equality before law?",
+    "options": ["Article 12", "Article 14", "Article 19", "Article 21"],
+    "answer": 1,
+    "explanation": "Article 14 guarantees equality before law and equal protection of the laws."
+  },
+  {
+    "id": "economy-1",
+    "topic": "Economy",
+    "difficulty": "Medium",
+    "question": "What does an increase in CRR (Cash Reserve Ratio) typically signal?",
+    "options": [
+      "More liquidity in the system",
+      "Reduced liquidity in the system",
+      "Fiscal expansion",
+      "Higher government borrowing"
+    ],
+    "answer": 1,
+    "explanation": "Raising CRR means banks must hold more reserves, reducing liquidity."
+  },
+  {
+    "id": "environment-1",
+    "topic": "Environment",
+    "difficulty": "Easy",
+    "question": "Which of the following is a greenhouse gas?",
+    "options": ["Oxygen", "Nitrogen", "Carbon Dioxide", "Argon"],
+    "answer": 2,
+    "explanation": "Carbon Dioxide is a greenhouse gas contributing to global warming."
+  },
+  {
+    "id": "ethics-1",
+    "topic": "Ethics",
+    "difficulty": "Medium",
+    "question": "What is the primary focus of a deontological ethical framework?",
+    "options": ["Consequences", "Duties and rules", "Personal emotions", "Utility"],
+    "answer": 1,
+    "explanation": "Deontology emphasizes duties, obligations, and rules."
+  },
+  {
+    "id": "ir-1",
+    "topic": "International Relations",
+    "difficulty": "Hard",
+    "question": "Which principle is central to the doctrine of non-alignment?",
+    "options": [
+      "Collective defense",
+      "Strategic neutrality",
+      "Economic isolation",
+      "Territorial expansion"
+    ],
+    "answer": 1,
+    "explanation": "Non-alignment stresses strategic neutrality and independent decision-making."
+  }
+]
