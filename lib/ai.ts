@@ -81,7 +81,7 @@ export async function callAI({
       }
       const data = await res.json();
       const models = Array.isArray(data.models) ? data.models : [];
-      const generateModels = models.filter((m) =>
+      const generateModels = models.filter((m: any) =>
         (m.supportedGenerationMethods || []).includes('generateContent')
       );
       if (!generateModels.length) {
@@ -102,11 +102,11 @@ export async function callAI({
       ];
 
       const names = generateModels
-        .map((m) => (typeof m.name === 'string' ? m.name : ''))
+        .map((m: any) => (typeof m.name === 'string' ? m.name : ''))
         .filter(Boolean);
 
       for (const pref of preferred) {
-        const match = names.find((name) => name.includes(pref));
+        const match = names.find((name: string) => name.includes(pref));
         if (match) return match.replace(/^models\//, '');
       }
 
