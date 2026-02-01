@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --surface: #f7f4ef;
+  --surface-2: #efe8db;
+  --surface-3: #e5dccb;
+  --text: #1b1916;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @apply font-body text-ink-900 antialiased;
+  background: radial-gradient(1400px circle at 10% 15%, #fff7e4, #f2e7d4 50%, #e7d8bf 100%);
+}
+
+main {
+  min-height: 100vh;
+}
+
+::selection {
+  background: #f97316;
+  color: #fff;
+}
+
+.app-bg {
+  position: relative;
+  isolation: isolate;
+}
+
+.app-bg::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(600px circle at 85% 10%, rgba(90, 162, 146, 0.15), transparent 60%),
+    radial-gradient(500px circle at 15% 80%, rgba(249, 115, 22, 0.12), transparent 60%),
+    linear-gradient(120deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.1));
+  z-index: -1;
+  pointer-events: none;
+}
+
+.section-header {
+  @apply flex flex-col gap-2;
+}
+
+.section-title {
+  @apply font-headline text-2xl font-semibold text-ink-900;
+}
+
+.section-subtitle {
+  @apply text-sm text-ink-600;
+}
+
+.gradient-border {
+  background: linear-gradient(120deg, #f9d29d, #c0e3da 60%, #f5e6d5);
+  padding: 1px;
+  border-radius: 20px;
+}
+
+.gradient-panel {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+  border-radius: 18px;
+}
+
+.markdown {
+  line-height: 1.6;
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4 {
+  @apply font-headline text-ink-900;
+  margin-top: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.markdown h1 {
+  font-size: 1.25rem;
+}
+
+.markdown h2 {
+  font-size: 1.125rem;
+}
+
+.markdown h3,
+.markdown h4 {
+  font-size: 1rem;
+}
+
+.markdown p {
+  margin-top: 0.6rem;
+}
+
+.markdown strong {
+  @apply text-ink-900;
+  font-weight: 600;
+}
+
+.markdown em {
+  font-style: italic;
+}
+
+.markdown ul,
+.markdown ol {
+  margin-top: 0.6rem;
+  padding-left: 1.25rem;
+}
+
+.markdown ul {
+  list-style: disc;
+}
+
+.markdown ol {
+  list-style: decimal;
+}
+
+.markdown li {
+  margin-top: 0.25rem;
+}
+
+.markdown hr {
+  border: 0;
+  height: 1px;
+  background: #e6dcc8;
+  margin: 1rem 0;
+}
+
+.markdown blockquote {
+  border-left: 3px solid #e6dcc8;
+  padding-left: 0.75rem;
+  color: #6b5f52;
+  margin-top: 0.75rem;
+}
+
+.markdown code {
+  background: #f3ecdf;
+  padding: 0.1rem 0.3rem;
+  border-radius: 4px;
+}
