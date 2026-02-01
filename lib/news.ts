@@ -28,12 +28,26 @@ export async function fetchNews(category: NewsCategory) {
     return data.articles || [];
   }
 
+  if (provider === 'currents') {
+    const url = new URL('https://api.currentsapi.services/v1/search');
+    url.searchParams.set('keywords', categoryMap[category]);
+    url.searchParams.set('language', 'en');
+    url.searchParams.set('limit', '6');
+
+    const res = await fetch(url, {
+      headers: { 'Authorization': key }
+    });
+    if (!res.ok) throw new Error('Currents error');
+    const data = await res.json();
+    return data.news || [];
+  }
+
   const url = new URL('https://gnews.io/api/v4/search');
   url.searchParams.set('q', categoryMap[category]);
   url.searchParams.set('lang', 'en');
   url.searchParams.set('max', '6');
   url.searchParams.set('sortby', 'publishedAt');
-  url.searchParams.set('token', key);
+  url.searchParams.set('apikey', key);
 
   const res = await fetch(url);
   if (!res.ok) throw new Error('GNews error');
